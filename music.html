@@ -1,0 +1,268 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Felix Arash Music - Listen to Felix Arash's Heaven List. A unique music experience by Felix Arash.">
+      <meta name="keywords" content="Felix Arash Music, Felix Arash, Felix Arash Music App, Felix Arash Heaven List, Music Player">
+      <meta name="author" content="Felix Arash">
+      <meta property="og:title" content="Felix Arash Music Player">
+      <meta property="og:description" content="Experience Felix Arash's Heaven List - A curated music collection">
+      <meta property="og:type" content="website">
+      <title>Felix Arash Music Player</title>
+      <link rel="icon" type="image/webp" href="./musicmedia/Cheshire_head.webp">
+      <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+    <body class="min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('./musicmedia/IMG_1394.JPG')">
+        <!-- Navbar -->
+        <nav class="bg-white/70 backdrop-blur-lg shadow-md fixed top-0 left-0 right-0 z-50">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-lg font-bold">Felix Arash</h1>
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden block text-gray-700 hover:text-blue-500" onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    <!-- Desktop menu -->
+                    <ul class="hidden md:flex space-x-6">
+                        <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                        <li><a href="music.html" class="text-blue-600 font-semibold">Music</a></li>
+                        <li><a href="photos.html" class="text-gray-700 hover:text-blue-500">Photos</a></li>
+                        <li><a href="writings.html" class="text-gray-700 hover:text-blue-500">Writings</a></li>
+                        <li><a href="videos.html" class="text-gray-700 hover:text-blue-500">Videos</a></li>
+                        <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+                        <li><a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="hidden md:hidden">
+                    <ul class="pt-2 pb-3 space-y-2">
+                        <li><a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Home</a></li>
+                        <li><a href="music.html" class="block px-3 py-2 text-blue-600 font-semibold bg-gray-100 rounded-md">Music</a></li>
+                        <li><a href="photos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Photos</a></li>
+                        <li><a href="writings.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Writings</a></li>
+                        <li><a href="videos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Videos</a></li>
+                        <li><a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">About</a></li>
+                        <li><a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 py-8 pt-28">
+            <!-- ...existing code... -->
+
+          <!-- Music Player -->
+          <div class="max-w-md mx-auto bg-black/40 backdrop-blur-lg rounded-2xl p-6 mt-16">
+              <div class="relative aspect-w-16 aspect-h-16">
+                  <img id="albumArt" src="./musicmedia/Cheshire_head.webp" alt="Album Art" class="w-full h-auto object-cover rounded-lg shadow-xl">
+                  <div class="mt-4">
+                      <h2 id="songTitle" class="text-white text-2xl font-bold">Loading...</h2>
+                      <p id="artistName" class="text-gray-300">Artist</p>
+                  </div>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="mt-4">
+                  <div class="bg-white/20 rounded-full h-1 cursor-pointer" id="progressContainer">
+                      <div id="progress" class="bg-white rounded-full h-1 w-0 transition-all"></div>
+                  </div>
+                  <div class="flex justify-between text-sm text-gray-300 mt-1">
+                      <span id="currentTime">0:00</span>
+                      <span id="duration">0:00</span>
+                  </div>
+              </div>
+
+              <!-- Volume Control -->
+              <div class="mt-4 flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M18 8a7 7 0 010 8M11 3v18M6 8l-4 4 4 4" />
+                  </svg>
+                  <input type="range" id="volumeControl" class="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer" min="0" max="1" step="0.01" value="0.2">
+              </div>
+
+              <!-- Controls -->
+              <div class="flex justify-center items-center space-x-6 mt-6">
+                  <button id="prevBtn" class="text-white hover:text-gray-300 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                      </svg>
+                  </button>
+                  <button id="playBtn" class="bg-black/40 rounded-full p-3 hover:bg-black/60 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      </svg>
+                  </button>
+                  <button id="nextBtn" class="text-white hover:text-gray-300 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                  </button>
+              </div>
+          </div>
+
+          <!-- Playlist -->
+          <div class="max-w-md mx-auto mt-8 bg-black/40 backdrop-blur-lg rounded-2xl p-6">
+              <h3 class="text-white text-xl font-bold mb-4">Felix Arash Heaven List</h3>
+              <div id="playlist" class="space-y-4">
+                  <!-- Playlist items will be inserted here -->
+              </div>
+          </div>
+      </div>
+
+        <script>
+            function toggleMenu() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            }
+        </script>
+      <script>
+          const songs = [
+              { title: "Summer Vibes", artist: "Chill Wave", src: "./musicmedia/antent - your eyes(MP3_320K).mp3" },
+              { title: "Midnight Dreams", artist: "Luna Echo", src: "path/to/song2.mp3" },
+              { title: "Ocean Breeze", artist: "Coastal Beats", src: "path/to/song3.mp3" }
+          ];
+
+          let currentSongIndex = 0;
+          const audio = new Audio();
+          const playBtn = document.getElementById('playBtn');
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+          const progress = document.getElementById('progress');
+          const progressContainer = document.getElementById('progressContainer');
+          const currentTime = document.getElementById('currentTime');
+          const duration = document.getElementById('duration');
+          const songTitle = document.getElementById('songTitle');
+          const artistName = document.getElementById('artistName');
+          const playlist = document.getElementById('playlist');
+          const volumeControl = document.getElementById('volumeControl');
+
+          // Initialize player
+          function initPlayer() {
+              audio.src = songs[currentSongIndex].src;
+              updateSongInfo();
+              renderPlaylist();
+              
+              // Set initial volume to low
+              audio.volume = 0.2;
+              volumeControl.value = 0.2;
+              
+              // Auto-play with user interaction handling
+              const playPromise = audio.play();
+              if (playPromise !== undefined) {
+                  playPromise.then(_ => {
+                      // Auto-play started successfully
+                      playBtn.innerHTML = `
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                      `;
+                  })
+                  .catch(error => {
+                      // Auto-play was prevented
+                      console.log("Auto-play was prevented. Please interact with the document first.");
+                  });
+              }
+          }
+
+          // Volume control
+          volumeControl.addEventListener('input', (e) => {
+              audio.volume = e.target.value;
+          });
+
+          // Progress bar click handling
+          progressContainer.addEventListener('click', (e) => {
+              const rect = progressContainer.getBoundingClientRect();
+              const clickPosition = (e.clientX - rect.left) / rect.width;
+              audio.currentTime = clickPosition * audio.duration;
+          });
+
+          // Update song information
+          function updateSongInfo() {
+              songTitle.textContent = songs[currentSongIndex].title;
+              artistName.textContent = songs[currentSongIndex].artist;
+          }
+
+          // Render playlist
+          function renderPlaylist() {
+              playlist.innerHTML = '';
+              songs.forEach((song, index) => {
+                  const item = document.createElement('div');
+                  item.className = `flex justify-between items-center p-3 rounded-lg ${currentSongIndex === index ? 'bg-black/40' : 'hover:bg-black/30'} cursor-pointer transition-all`;
+                  item.innerHTML = `
+                      <div>
+                          <h4 class="text-white font-medium">${song.title}</h4>
+                          <p class="text-gray-300 text-sm">${song.artist}</p>
+                      </div>
+                      ${currentSongIndex === index ? '<span class="text-white">Playing</span>' : ''}
+                  `;
+                  item.onclick = () => {
+                      currentSongIndex = index;
+                      initPlayer();
+                  };
+                  playlist.appendChild(item);
+              });
+          }
+
+          // Play/Pause
+          playBtn.onclick = () => {
+              if (audio.paused) {
+                  audio.play();
+                  playBtn.innerHTML = `
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                  `;
+              } else {
+                  audio.pause();
+                  playBtn.innerHTML = `
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      </svg>
+                  `;
+              }
+          };
+
+          // Previous song
+          prevBtn.onclick = () => {
+              currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+              initPlayer();
+          };
+
+          // Next song
+          nextBtn.onclick = () => {
+              currentSongIndex = (currentSongIndex + 1) % songs.length;
+              initPlayer();
+          };
+
+          // Update progress bar
+          audio.ontimeupdate = () => {
+              const progressPercent = (audio.currentTime / audio.duration) * 100;
+              progress.style.width = `${progressPercent}%`;
+              currentTime.textContent = formatTime(audio.currentTime);
+          };
+
+          audio.onloadedmetadata = () => {
+              duration.textContent = formatTime(audio.duration);
+          };
+
+          // Format time
+          function formatTime(seconds) {
+              const minutes = Math.floor(seconds / 60);
+              const remainingSeconds = Math.floor(seconds % 60);
+              return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+          }
+
+          // Auto play next song
+          audio.onended = () => {
+              currentSongIndex = (currentSongIndex + 1) % songs.length;
+              initPlayer();
+          };
+
+          // Initialize player on page load
+          window.onload = initPlayer;
+      </script>
+  </body>
+  </html>

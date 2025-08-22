@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Felix Arash Blog - Thoughts, stories, and updates.">
+  <meta name="author" content="Felix Arash">
+  <title>Blog - Felix Arash</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.5);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.7);
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: url('./indexmedia/bafkreica2sljyid6hk2e7kee335bzjwssclyu5vmreafhusfodnpd22q3e.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    main {
+      flex: 1;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    footer {
+      backdrop-filter: blur(10px);
+      background-color: rgba(31, 41, 55, 0.8) !important;
+    }
+    .arabic-quote {
+      font-family: 'Amiri', serif;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white/70 backdrop-blur-lg shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <h1 class="text-lg font-bold">Felix Arash</h1>
+        <!-- Mobile menu button -->
+        <button class="md:hidden block text-gray-700 hover:text-blue-500" onclick="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+          <li><a href="music.html" class="text-gray-700 hover:text-blue-500">Music</a></li>
+          <li><a href="photos.html" class="text-gray-700 hover:text-blue-500">Photos</a></li>
+          <li><a href="writings.html" class="text-gray-700 hover:text-blue-500">Writings</a></li>
+          <li><a href="videos.html" class="text-gray-700 hover:text-blue-500">Videos</a></li>
+          <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+          <li><a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+          <li><a href="blog.html" class="text-blue-600 font-semibold">Blog</a></li>
+        </ul>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="pt-2 pb-3 space-y-2">
+          <li><a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Home</a></li>
+          <li><a href="music.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Music</a></li>
+          <li><a href="photos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Photos</a></li>
+          <li><a href="writings.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Writings</a></li>
+          <li><a href="videos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Videos</a></li>
+          <li><a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">About</a></li>
+          <li><a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Contact</a></li>
+          <li><a href="blog.html" class="block px-3 py-2 text-blue-600 font-semibold bg-gray-100 rounded-md">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20 container mx-auto px-4">
+    <section class="bg-white/80 backdrop-blur-lg shadow-lg rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+      <article class="mb-10">
+        <img src="./indexmedia/pexels-ferdinando-grimaldi-896408288-19850293.jpg" alt="Blog Cover" class="rounded-lg shadow-md w-full h-64 object-cover mb-4">
+        <h2 class="text-2xl font-bold mb-2">Finding Calm in the Digital Storm</h2>
+        <div class="flex items-center text-sm text-gray-500 mb-2">
+          <span class="mr-2">By <span class="font-semibold text-gray-700">Felix Arash</span></span>
+          <span class="mx-2">•</span>
+          <span>August 22, 2025</span>
+          <span class="mx-2">•</span>
+          <span>10:30 AM</span>
+        </div>
+        <div class="mb-2">
+          <a href="#" class="text-blue-500 hover:underline mr-2">#calm</a>
+          <a href="#" class="text-blue-500 hover:underline mr-2">#digital</a>
+          <a href="#" class="text-blue-500 hover:underline">#mindfulness</a>
+        </div>
+        <p class="text-gray-700 mb-4">
+          In a world buzzing with notifications and endless scrolling, finding a moment of calm can feel impossible. But serenity is not out of reach. By embracing mindful practices and disconnecting from the digital noise, we can rediscover the beauty of the present moment.
+        </p>
+      <article>
+        <img src="./aboutmedia/le-sixieme-reve-gnx_-muR0uw-unsplash.jpg" alt="Blog Cover 2" class="rounded-lg shadow-md w-full h-64 object-cover mb-4">
+        <h2 class="text-2xl font-bold mb-2">The Ocean's Whisper</h2>
+        <div class="flex items-center text-sm text-gray-500 mb-2">
+          <span class="mr-2">By <span class="font-semibold text-gray-700">Felix Arash</span></span>
+          <span class="mx-2">•</span>
+          <span>August 20, 2025</span>
+          <span class="mx-2">•</span>
+          <span>7:15 PM</span>
+        </div>
+        <div class="mb-2">
+          <a href="#" class="text-blue-500 hover:underline mr-2">#ocean</a>
+          <a href="#" class="text-blue-500 hover:underline mr-2">#nature</a>
+          <a href="#" class="text-blue-500 hover:underline">#peace</a>
+        </div>
+        <p class="text-gray-700 mb-4">
+          The ocean has always been my sanctuary. Its waves carry away my worries, and its vastness reminds me of endless possibilities. Every visit is a new story, a new lesson in letting go and embracing the flow of life.
+        </p>
+       
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white py-4 mt-auto">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm md:text-base">© 2025 Felix Arash. All rights reserved.</p>
+        <div class="flex flex-col items-center md:items-end space-y-1 mt-2 md:mt-0">
+          <p id="current-time" class="text-xs md:text-sm font-semibold"></p>
+          <p id="gregorian-date" class="text-xs md:text-sm"></p>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-4 mt-3">
+        <a href="https://www.instagram.com/foxaleo/" class="hover:text-blue-400"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/felixarash" class="hover:text-blue-400"><i class="fab fa-twitter"></i> X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Date Display -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const timeOptions = { hour: '2-digit', minute: '2-digit' };
+      document.getElementById('current-time').innerText = now.toLocaleTimeString('en-US', timeOptions);
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('gregorian-date').innerText = now.toLocaleDateString('en-US', dateOptions);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

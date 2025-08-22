@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Felix Arash (Fozan Ahmed Memon) - A Computer Science student, Data Scientist, Programmer, and YouTuber from Karachi, Pakistan. Known for being empathetic, music lover, and thalassophile.">
+  <meta name="keywords" content="felix arash, fozan ahmed, فوزان احمد, fozan ahmed memon, programmer, data scientist, data analyst, computer science student, youtuber, thalassophile, enfpa, saggitarius, karachi pakistan, duet student, ocean lover, music lover">
+  <meta name="author" content="Felix Arash">
+  <meta property="og:title" content="Felix Arash - Fozan Ahmed Memon">
+  <meta property="og:description" content="Personal website of Felix Arash (Fozan Ahmed Memon) - Data Scientist, Programmer, and Content Creator">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Felix Arash (Fozan Ahmed)">
+  <meta name="twitter:description" content="Personal website of Felix Arash - Data Scientist and Computer Science Student">
+  <link rel="alternate" hreflang="ar" href="#">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <title>Felix Arash (Fozan Ahmed Memon) - Data Scientist & Programmer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.5);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.7);
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: url('./indexmedia/bafkreica2sljyid6hk2e7kee335bzjwssclyu5vmreafhusfodnpd22q3e.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    main {
+      flex: 1;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    footer {
+      backdrop-filter: blur(10px);
+      background-color: rgba(31, 41, 55, 0.8) !important;
+    }
+    .arabic-quote {
+      font-family: 'Amiri', serif;
+    }
+    #hijri-date {
+      font-family: 'Amiri', serif;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white/70 backdrop-blur-lg shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <h1 class="text-lg font-bold">Felix Arash</h1>
+        <!-- Mobile menu button -->
+        <button class="md:hidden block text-gray-700 hover:text-blue-500" onclick="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+          <li><a href="music.html" class="text-gray-700 hover:text-blue-500">Music</a></li>
+          <li><a href="photos.html" class="text-gray-700 hover:text-blue-500">Photos</a></li>
+          <li><a href="writings.html" class="text-gray-700 hover:text-blue-500">Writings</a></li>
+          <li><a href="videos.html" class="text-gray-700 hover:text-blue-500">Videos</a></li>
+          <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+          <li><a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="pt-2 pb-3 space-y-2">
+          <li><a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Home</a></li>
+          <li><a href="music.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Music</a></li>
+          <li><a href="photos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Photos</a></li>
+          <li><a href="writings.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Writings</a></li>
+          <li><a href="videos.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Videos</a></li>
+          <li><a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">About</a></li>
+          <li><a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-100 rounded-md">Contact</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20 container mx-auto px-4">
+    <!-- Bio Section -->
+    <section class="bg-white/80 backdrop-blur-lg shadow-lg rounded-lg p-6 mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+        <div class="lg:w-2/3 lg:pr-8 order-2 lg:order-1">
+          <h2 class="text-2xl font-semibold">Felix Arash (Fozan Ahmed)</h2>
+          <p class="text-gray-600">A Writer, Alturism Enthusiast, Poet sharing my world with you.</p>
+          <div class="mt-4 text-sm text-gray-700 space-y-2">
+            <p><span class="font-semibold">A Thalassophile</span> – Loves the ocean and finds peace in the sound of waves and the endless horizon.</p>
+            <p><span class="font-semibold">An Astrophile</span> – Often drawn to the stars, captivated by the vast mysteries of the universe.</p>
+            <p><span class="font-semibold">A Selenophile</span> – The moon's quiet glow holds a special place in heart, reflecting his love for its serene beauty.</p>
+            <p><span class="font-semibold">A Curious Mind</span> – With a keen interest in psychology and philosophy, always exploring the depths of thought and existence.</p>
+            <p><span class="font-semibold">Health and Fitness Enthusiast</span> – Believes in staying active, fit, and balanced, nurturing both body and mind.</p>
+            <p><span class="font-semibold">Social at Heart</span> – Thrives in social settings, enjoying time spent hanging out and connecting with others.</p>
+          </div>
+          <div class="mt-6">
+            <h3 class="text-xl font-semibold mb-3">Quote</h3>
+            <div class="space-y-4">
+              <p class="arabic-quote text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                "في عالم مليء بالضجيج، اختر أن تكون السكينة التي يبحث عنها الآخرون"
+              </p>
+              <p class="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                "In a world full of noise, choose to be the serenity that others seek"
+              </p>
+              <p class="text-gray-600 italic text-sm sm:text-base">
+                - Felix Arash
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 mb-6 lg:mb-0 order-1 lg:order-2">
+          <img src="./indexmedia/126e3b33f615365faf377eed912eb0fe6e54f7ce_high.webp" alt="Profile Picture" class="w-48 h-72 md:w-64 md:h-96 object-cover mx-auto lg:mx-0">
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Updates Section -->
+    <section class="bg-white/80 backdrop-blur-lg shadow-lg rounded-lg p-6 mb-8">
+      <h3 class="text-lg font-semibold mb-4">Latest Updates</h3>
+      <ul>
+        <li class="mb-3"><a href="blog.html" class="text-blue-500 hover:underline">Latest blog post on creativity</a></li>
+        <li class="mb-3"><a href="music.html" class="text-blue-500 hover:underline">My favorite music playlist</a></li>
+        <li><a href="photos.html" class="text-blue-500 hover:underline">New photo collection</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white py-4 mt-auto">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm md:text-base">© 2025 Felix Arash. All rights reserved.</p>
+        <div class="flex flex-col items-center md:items-end space-y-1 mt-2 md:mt-0">
+          <p id="current-time" class="text-xs md:text-sm font-semibold"></p>
+          <p id="gregorian-date" class="text-xs md:text-sm"></p>
+          <p id="hijri-date" class="text-xs md:text-sm"></p>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-4 mt-3">
+        <a href="https://www.instagram.com/foxaleo/" class="hover:text-blue-400"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/felixarash" class="hover:text-blue-400"><i class="fab fa-twitter"></i> X</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Date Display -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      
+      // Update current time
+      const timeOptions = { hour: '2-digit', minute: '2-digit' };
+      document.getElementById('current-time').innerText = now.toLocaleTimeString('en-US', timeOptions);
+      
+      // Update Gregorian date
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('gregorian-date').innerText = now.toLocaleDateString('en-US', dateOptions);
+      
+      // Update Hijri date with month name
+      const hijriMonths = ["محرم", "صفر", "ربيع الأول", "ربيع الآخر", "جمادى الأولى", "جمادى الآخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"];
+      const hijriDate = new Intl.DateTimeFormat('ar-TN-u-ca-islamic', {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric'
+      }).format(now);
+      
+      const hijriParts = hijriDate.split('/');
+      const hijriMonth = hijriMonths[parseInt(hijriParts[1]) - 1];
+      document.getElementById('hijri-date').innerText = `التاريخ الهجري: ${hijriParts[0]} ${hijriMonth} ${hijriParts[2]}`;
+    }
+
+    // Update time immediately and then every minute
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+
+    // Toggle mobile menu
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
